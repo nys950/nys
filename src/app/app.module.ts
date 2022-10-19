@@ -9,6 +9,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { MegaMenuComponent } from './navegation/navbars/mega-menu/mega-menu.component';
 import { FooterComponent } from './navegation/footer/footer.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
+import { ProyectosComponet } from './views/proyectos/proyectos.componet';
+import { NosotrosComponent } from './views/nosotros/nosotros.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { ContactusComponent } from './components/contactus/contactus.component';
     CarouselComponent,
     MegaMenuComponent,
     FooterComponent,
-    ContactusComponent
+    ContactusComponent,
+    ProyectosComponet,
+    NosotrosComponent
   ],
   imports: [
     BrowserModule,
