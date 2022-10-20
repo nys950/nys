@@ -8,7 +8,7 @@ import mapboxgl, {Map} from 'mapbox-gl'
 })
 export class ContactusComponent implements AfterViewInit {
   @ViewChild('mapDiv')
-  mapDivElelement!: ElementRef
+  mapDivElelement!: ElementRef;
   constructor() { }
 
   ngAfterViewInit() {
@@ -20,11 +20,12 @@ export class ContactusComponent implements AfterViewInit {
       container: this.mapDivElelement.nativeElement,
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [-73.77153350120048, 3.9864402037157625],
-      zoom: 13
+      zoom: 13,
+      cooperativeGestures: true
     });
+    map.addControl(new mapboxgl.NavigationControl());
     const marker1 = new mapboxgl.Marker()
       .setLngLat([-73.77153350120048, 3.9864402037157625])
       .addTo(map);
   }
-
 }

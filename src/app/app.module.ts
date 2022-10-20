@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +11,11 @@ import { FooterComponent } from './navegation/footer/footer.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
 import { ProyectosComponet } from './views/proyectos/proyectos.componet';
 import { NosotrosComponent } from './views/nosotros/nosotros.component';
+import { ClientesComponent } from './components/clientes/clientes.component';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
+import { FaqsetionsComponent } from './components/faqsetions/faqsetions.component';
+import { CalltoactionsComponent } from './components/calltoactions/calltoactions.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 
 @NgModule({
@@ -23,13 +28,19 @@ import { NosotrosComponent } from './views/nosotros/nosotros.component';
     FooterComponent,
     ContactusComponent,
     ProyectosComponet,
-    NosotrosComponent
+    NosotrosComponent,
+    ClientesComponent,
+    BreadcrumbComponent,
+    FaqsetionsComponent,
+    CalltoactionsComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
